@@ -22,7 +22,7 @@ mixin MoviesConverter {
       Movie(title: title, genre: genre, createdAt: Timestamp.fromDate(now)),
     );
   }
-  // FireStoreにデータを削除する.
+  // FireStoreのデータを削除する.
   Future<void> removeMovies(dynamic document) async {
     // 映画情報を追加.
     await moviesConverter.doc(document).delete();
